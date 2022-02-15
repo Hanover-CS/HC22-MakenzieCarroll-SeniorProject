@@ -9,12 +9,17 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="386dp"
+        android:layout_height="190dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:lineSpacingExtra="20sp"
         android:text="Do you need a special fit? (for width)"
+        android:textAlignment="center"
+        android:textColor="#070606"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,16 +27,15 @@
 
     <RadioGroup
         android:id="@+id/widthGroup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="384dp"
+        android:layout_height="254dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.504">
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
 
         <RadioButton
             android:id="@+id/regularWidth"
@@ -39,6 +43,9 @@
             android:layout_height="wrap_content"
             android:onClick="onRadioWidthClicked"
             android:text="Regular width "
+            android:textAlignment="center"
+            android:textColor="#F44336"
+            android:textSize="20sp"
             tools:ignore="UsingOnClickInXml" />
 
         <RadioButton
@@ -47,15 +54,30 @@
             android:layout_height="wrap_content"
             android:onClick="onRadioWidthClicked"
             android:text="Wide width"
+            android:textAlignment="center"
+            android:textColor="#EF5252"
+            android:textSize="20sp"
             tools:ignore="UsingOnClickInXml" />
 
         <RadioButton
             android:id="@+id/narrowWidth"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioWidthClicked"
             android:text="Narrow width"
+            android:textAlignment="center"
+            android:textColor="#FD0505"
+            android:textSize="20sp"
             tools:ignore="UsingOnClickInXml" />
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="396dp"
+        android:layout_height="240dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/width" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

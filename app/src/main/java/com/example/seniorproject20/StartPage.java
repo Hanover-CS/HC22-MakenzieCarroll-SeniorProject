@@ -1,6 +1,8 @@
 package com.example.seniorproject20;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,4 +20,9 @@ public class StartPage extends AppCompatActivity {
         Intent intent = new Intent(this, WidthFit.class);
         startActivity(intent);
     }
+
+//    Room.databaseBuilder(appContext. AppDatabase.class, "shoes_database.db")
+//    .createFromFile(new File(""))
+
+
 }

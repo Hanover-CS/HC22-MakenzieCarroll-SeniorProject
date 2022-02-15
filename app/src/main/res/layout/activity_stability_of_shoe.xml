@@ -8,12 +8,17 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="36dp"
+        android:layout_width="385dp"
+        android:layout_height="119dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:text="Take your shoes off and stand on one foot to see how balanced you feel, do you feel:"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#090808"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,28 +26,45 @@
 
     <RadioGroup
         android:id="@+id/stabilityGroup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="407dp"
+        android:layout_height="107dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/imageView6">
 
         <RadioButton
             android:id="@+id/stable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioStability"
-            android:text="Stable" />
+            android:text="Stable"
+            android:textAlignment="center"
+            android:textColor="#673AB7"
+            android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/unstable"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioStability"
-            android:text="Unstable" />
+            android:text="Neutral"
+            android:textAlignment="center"
+            android:textColor="#E91E63"
+            android:textSize="20sp" />
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="412dp"
+        android:layout_height="347dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/stable" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
