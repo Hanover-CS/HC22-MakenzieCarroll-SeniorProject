@@ -3,9 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_location_of_run.xml" value="0.163671875" />
+        <entry key="app/src/main/res/layout/activity_location_of_run.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_pronation_of_foot.xml" value="0.163671875" />
+        <entry key="app/src/main/res/layout/activity_pronation_of_foot.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_results_page.xml" value="0.163671875" />
         <entry key="app/src/main/res/layout/activity_stability_of_shoe.xml" value="0.266796875" />
         <entry key="app/src/main/res/layout/activity_start_page.xml" value="0.255078125" />
