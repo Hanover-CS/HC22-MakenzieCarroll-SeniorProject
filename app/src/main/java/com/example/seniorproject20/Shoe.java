@@ -9,7 +9,6 @@ public class Shoe implements Parcelable {
     //Variables
     public int width;
     public int location;
-    public int miles;
     public int stable;
     public int pronation;
     public int total;
@@ -18,7 +17,6 @@ public class Shoe implements Parcelable {
     public Shoe() {
         this.width = 0;
         this.location = 0;
-        this.miles = 0;
         this.stable = 0;
         this.pronation = 0;
         this.total = 0;
@@ -27,16 +25,14 @@ public class Shoe implements Parcelable {
     protected Shoe(Parcel in) {
         width = in.readInt();
         location = in.readInt();
-        miles = in.readInt();
         stable = in.readInt();
         pronation = in.readInt();
         total = in.readInt();
     }
     //Regular Constructor
-    public Shoe(int width, int road, int miles, int stable, int pronation) {
+    public Shoe(int width, int road, int stable, int pronation) {
         this.width = width;
         this.location = road;
-        this.miles = miles;
         this.stable = stable;
         this.pronation = pronation;
         this.total = total;
@@ -46,7 +42,6 @@ public class Shoe implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(width);
         dest.writeInt(location);
-        dest.writeInt(miles);
         dest.writeInt(stable);
         dest.writeInt(pronation);
     }
@@ -82,14 +77,6 @@ public class Shoe implements Parcelable {
 
     public void setLocation(int location) {
         this.location = location;
-    }
-
-    public int getMiles() {
-        return miles;
-    }
-
-    public void setMiles(int miles) {
-        this.miles = miles;
     }
 
     public int getStable() {
