@@ -2,10 +2,8 @@ package com.example.seniorproject20;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
-import java.lang.reflect.Array;
-
-public class Shoe implements Parcelable {
+//Calculates the variables of different numbers and creates an added ID number for the shoe
+public class ShoeCalculator implements Parcelable {
     //Variables
     public int width;
     public int location;
@@ -14,7 +12,7 @@ public class Shoe implements Parcelable {
     public int total;
 
     //Empty Constructor
-    public Shoe() {
+    public ShoeCalculator() {
         this.width = 0;
         this.location = 0;
         this.stable = 0;
@@ -22,7 +20,7 @@ public class Shoe implements Parcelable {
         this.total = 0;
     }
     //Parcelable Constuctor
-    protected Shoe(Parcel in) {
+    protected ShoeCalculator(Parcel in) {
         width = in.readInt();
         location = in.readInt();
         stable = in.readInt();
@@ -30,7 +28,7 @@ public class Shoe implements Parcelable {
         total = in.readInt();
     }
     //Regular Constructor
-    public Shoe(int width, int road, int stable, int pronation) {
+    public ShoeCalculator(int width, int road, int stable, int pronation) {
         this.width = width;
         this.location = road;
         this.stable = stable;
@@ -51,15 +49,15 @@ public class Shoe implements Parcelable {
         return 0;
     }
 
-    public static final Creator<Shoe> CREATOR = new Creator<Shoe>() {
+    public static final Creator<ShoeCalculator> CREATOR = new Creator<ShoeCalculator>() {
         @Override
-        public Shoe createFromParcel(Parcel in) {
-            return new Shoe(in);
+        public ShoeCalculator createFromParcel(Parcel in) {
+            return new ShoeCalculator(in);
         }
 
         @Override
-        public Shoe[] newArray(int size) {
-            return new Shoe[size];
+        public ShoeCalculator[] newArray(int size) {
+            return new ShoeCalculator[size];
         }
     };
     //Getters and Setters

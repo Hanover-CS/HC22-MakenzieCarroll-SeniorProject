@@ -7,9 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 
+//Users specification of the location of run and its generated number
 public class LocationOfRun extends AppCompatActivity {
 
-    Shoe shoe;
+    ShoeCalculator shoeCalculator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,7 @@ public class LocationOfRun extends AppCompatActivity {
 
         //Grabs the intent and grabs the shoe
         Intent intent = getIntent();
-        shoe = intent.getParcelableExtra("radioChosen");
+        shoeCalculator = intent.getParcelableExtra("radioChosen");
     }
 
     //Called when the user taps the button
@@ -30,17 +31,17 @@ public class LocationOfRun extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.roads:
                 if (checked) {
-                    shoe.setLocation(10);
+                    shoeCalculator.setLocation(10);
                 }
                 break;
             case R.id.trail:
                 if (checked) {
-                    shoe.setLocation(20);
+                    shoeCalculator.setLocation(20);
                 }
                 break;
         }
         Intent intent = new Intent(this, StabilityOfShoe.class);
-        intent.putExtra("radioChosen", shoe);
+        intent.putExtra("radioChosen", shoeCalculator);
         startActivity(intent);
     }
 }

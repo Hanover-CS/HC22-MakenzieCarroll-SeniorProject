@@ -7,9 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
 
+//Users specification of the users foot pronation and its generated number
 public class PronationOfFoot extends AppCompatActivity {
 
-    Shoe shoe;
+    ShoeCalculator shoeCalculator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,7 @@ public class PronationOfFoot extends AppCompatActivity {
 
         //Grabs the intent and grabs the shoe
         Intent intent = getIntent();
-        shoe = intent.getParcelableExtra("radioChosen");
+        shoeCalculator = intent.getParcelableExtra("radioChosen");
     }
 
     //Called when the user taps the button
@@ -31,24 +32,24 @@ public class PronationOfFoot extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.neutralPronation:
                 if (checked) {
-                    shoe.setPronation(1000);
+                    shoeCalculator.setPronation(1000);
                 }
                 break;
             case R.id.overPronation:
                 if (checked) {
-                    shoe.setPronation(2000);
+                    shoeCalculator.setPronation(2000);
                 }
                 break;
             case R.id.underPronation:
                 if (checked) {
-                    shoe.setPronation(3000);
+                    shoeCalculator.setPronation(3000);
                 }
                 break;
         }
 
         Intent intent = new Intent(this, ResultsPage.class);
-        shoe.createSum();
-        intent.putExtra("radioChosen", shoe);
+        shoeCalculator.createSum();
+        intent.putExtra("radioChosen", shoeCalculator);
         startActivity(intent);
     }
 }

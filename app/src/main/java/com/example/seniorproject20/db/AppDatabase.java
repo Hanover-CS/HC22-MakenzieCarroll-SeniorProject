@@ -16,6 +16,7 @@ public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase INSTANCE;
 
+    //Prepopulate from the file system
     public static AppDatabase getDbInstance(final Context context) {
         if(INSTANCE == null) {
             synchronized (AppDatabase.class) {
