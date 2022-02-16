@@ -22,7 +22,7 @@ public class ResultsPage extends AppCompatActivity {
         Bundle extras = intent.getExtras();
         totalShoeScore = extras.getInt("curTotal");
         Log.d(TAG, String.valueOf(totalShoeScore));
-        TextView shoeRec = (TextView) findViewById(R.id.textView3);
+        TextView shoeRec = (TextView) findViewById(R.id.results_text);
         String finalText = "This is your shoe recommendation based on your needs " + String.valueOf(totalShoeScore);
         shoeRec.setText(finalText);
 

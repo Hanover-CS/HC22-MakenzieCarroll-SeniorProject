@@ -7,13 +7,13 @@
     tools:context=".LocationActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/location_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="16dp"
-        android:text="Where do you want to run?"
+        android:text="@string/location_Screen3"
         android:textAlignment="center"
         android:textColor="#050505"
         android:textSize="24sp"
@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioLocation"
-            android:text="Roads/gym/track"
+            android:text="@string/roads_answer"
             android:textAlignment="center"
             android:textColor="#E11818"
             android:textSize="24sp" />
@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioLocation"
-            android:text="Trail/off roads"
+            android:text="@string/trail_answer"
             android:textAlignment="center"
             android:textColor="#29592B"
             android:textSize="24sp" />
@@ -63,8 +63,8 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/roadshoes" />
+        app:layout_constraintTop_toBottomOf="@+id/location_text"
+        app:srcCompat="@drawable/road_shoes" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -74,6 +74,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/trailshoes" />
+        app:srcCompat="@drawable/trail_shoes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

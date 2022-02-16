@@ -8,14 +8,14 @@
     tools:context=".WidthActivity">
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/width_text"
         android:layout_width="386dp"
         android:layout_height="190dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:lineSpacingExtra="20sp"
-        android:text="Do you need a special fit? (for width)"
+        android:text="@string/width_Screen2"
         android:textAlignment="center"
         android:textColor="#070606"
         android:textSize="24sp"
@@ -35,14 +35,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
+        app:layout_constraintTop_toBottomOf="@+id/width_text">
 
         <RadioButton
             android:id="@+id/regularWidth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioWidthClicked"
-            android:text="Regular width "
+            android:text="@string/regular_answer"
             android:textAlignment="center"
             android:textColor="#F44336"
             android:textSize="20sp"
@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioWidthClicked"
-            android:text="Wide width"
+            android:text="@string/wide_answer"
             android:textAlignment="center"
             android:textColor="#EF5252"
             android:textSize="20sp"
@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioWidthClicked"
-            android:text="Narrow width"
+            android:text="@string/narrow_answer"
             android:textAlignment="center"
             android:textColor="#FD0505"
             android:textSize="20sp"

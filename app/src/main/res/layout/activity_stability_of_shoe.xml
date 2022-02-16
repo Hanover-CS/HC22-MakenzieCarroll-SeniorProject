@@ -7,13 +7,13 @@
     tools:context=".StabilityActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/stable_text"
         android:layout_width="385dp"
         android:layout_height="119dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:text="Take your shoes off and stand on one foot to see how balanced you feel, do you feel:"
+        android:text="@string/stability_Screen4"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#090808"
@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioStability"
-            android:text="Stable"
+            android:text="@string/stable_answer"
             android:textAlignment="center"
             android:textColor="#673AB7"
             android:textSize="20sp" />
@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onRadioStability"
-            android:text="Neutral"
+            android:text="@string/neutral_answer"
             android:textAlignment="center"
             android:textColor="#E91E63"
             android:textSize="20sp" />
@@ -64,7 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/stable_text"
         app:srcCompat="@drawable/stable" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

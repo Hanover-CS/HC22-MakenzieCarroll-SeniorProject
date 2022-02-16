@@ -2,8 +2,19 @@
     <string name="app_name">Senior Project 2.0</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
-    <string name="Pronation_Q5">With your shoes still off take a step, pay attention to how the weight distributes along your foot. How are your feet positioned while walking?</string>
+    <string name="Pronation_Screen5">With your shoes still off take a step, pay attention to how the weight distributes along your foot. How are your feet positioned while walking?</string>
     <string name="neutral_pronation_answer">Feet stikefloor with heel first then roll towards the toes. Your arch lightly collapses inward. This is neutral pronation!</string>
     <string name="over_pronation_answer">Looks like the whole sole of your foot touches the ground. This means that you are an over pronator and the arch of your foot stretches inward too much.</string>
     <string name="under_pronation_answer">Outside of your foot has the most impact. This means that you are a under pronator. Your feet don\'t flex enough to provide proper shock absorption.</string>
+    <string name="location_Screen3">Where do you want to run?</string>
+    <string name="roads_answer">Roads/gym/track</string>
+    <string name="trail_answer">Trail/off roads</string>
+    <string name="stability_Screen4">Take your shoes off and stand on one foot to see how balanced you feel, do you feel:</string>
+    <string name="stable_answer">Stable</string>
+    <string name="neutral_answer">Neutral</string>
+    <string name="start_button_text">Click here to START</string>
+    <string name="width_Screen2">Do you need a special fit? (for width)</string>
+    <string name="regular_answer">Regular width</string>
+    <string name="wide_answer">Wide width</string>
+    <string name="narrow_answer">Narrow width</string>
 </resources>
