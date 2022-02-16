@@ -3,15 +3,20 @@ package com.example.seniorproject20;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
-
+//Users specification of the shoes width fit and its generated number
 public class WidthFit extends AppCompatActivity {
 
-    public Shoe shoe = new Shoe();
+    //public ShoeCalculator shoeCalculator = new ShoeCalculator();
+    private int widthValue;
     private RadioGroup radioGroup;
+    private static final String TAG = "WidthActivity";
+    private static final int REG_WIDTH = 1;
+    private static final int WIDE_WIDTH = 2;
+    private static final int NARROW_WIDTH = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,23 +39,27 @@ public class WidthFit extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.regularWidth:
                 if (checked) {
-                    shoe.setWidth(1);
+                    widthValue = REG_WIDTH;
+                    //shoeCalculator.setWidth(1);
                 }
                 break;
             case R.id.wideWidth:
                 if (checked) {
-                    shoe.setWidth(2);
+                    widthValue = WIDE_WIDTH;
+                    //shoeCalculator.setWidth(2);
                 }
                 break;
             case R.id.narrowWidth:
                 if (checked) {
-                    shoe.setWidth(3);
+                    widthValue = NARROW_WIDTH;
+                    //shoeCalculator.setWidth(3);
                 }
                 break;
         }
 
+        Log.d(TAG, String.valueOf(widthValue));
         Intent intent = new Intent(this, LocationOfRun.class);
-        intent.putExtra("radioChosen", shoe);
+        intent.putExtra("curTotal", widthValue);
         startActivity(intent);
     }
 }
