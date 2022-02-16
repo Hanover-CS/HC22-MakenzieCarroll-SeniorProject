@@ -9,11 +9,13 @@ import android.view.View;
 import android.widget.RadioButton;
 
 //Users specification of the location of run and its generated number
-public class LocationOfRun extends AppCompatActivity {
+public class LocationActivity extends AppCompatActivity {
 
     ShoeCalculator shoeCalculator;
     private int curTotal;
     private static final String TAG = "LocationActivity";
+    private static final int ROAD_RUN = 10;
+    private static final int TRAIL_RUN = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,6 @@ public class LocationOfRun extends AppCompatActivity {
         curTotal = extras.getInt("curTotal");
         Log.d(TAG, String.valueOf(curTotal));
 
-        //shoeCalculator = intent.getParcelableExtra("radioChosen");
     }
 
     //Called when the user taps the button
@@ -38,20 +39,18 @@ public class LocationOfRun extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.roads:
                 if (checked) {
-                    curTotal += 10;
-                    //shoeCalculator.setLocation(10);
+                    curTotal += ROAD_RUN;
                 }
                 break;
             case R.id.trail:
                 if (checked) {
-                    curTotal += 20;
-                    //shoeCalculator.setLocation(20);
+                    curTotal += TRAIL_RUN;
                 }
                 break;
         }
 
         Log.d(TAG, String.valueOf(curTotal));
-        Intent intent = new Intent(this, StabilityOfShoe.class);
+        Intent intent = new Intent(this, StabilityActivity.class);
         intent.putExtra("curTotal", curTotal);
         startActivity(intent);
     }

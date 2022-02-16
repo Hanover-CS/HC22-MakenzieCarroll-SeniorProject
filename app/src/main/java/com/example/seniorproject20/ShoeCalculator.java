@@ -107,15 +107,4 @@ public class ShoeCalculator implements Parcelable {
         total = this.getLocation() + this.getPronation() + this.getStable() + this.getWidth();
         this.setTotal(total);
     }
-
-
-
-//    //Select the shoe
-//    public Array result() {
-//        String[] recommendation;
-//        switch(this.total) {
-//            case 1111:
-//                switch();
-//        }
-//    }
 }

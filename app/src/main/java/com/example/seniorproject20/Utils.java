@@ -1,7 +1,6 @@
 package com.example.seniorproject20;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.google.gson.JsonSyntaxException;
 
@@ -24,12 +23,5 @@ public class Utils {
         }
         return jsonString;
     }
-//
-//    public <T> T fromJson(java.lang.String json, java.lang.Class<T> classOfT)
-//            throws JsonSyntaxException;
-//    public <T> T fromJson(java.lang.String json,
-//                          java.lang.reflect.Type typeOfT)
-//            throws JsonSyntaxException
-
 }
 

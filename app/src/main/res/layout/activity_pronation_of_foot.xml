@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PronationOfFoot">
+    tools:context=".PronationActivity">
 
     <TextView
         android:id="@+id/textView4"
@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="With your shoes still off take a step, pay attention to how the weight distributes along your foot. How are your feet positioned while walking?"
+        android:text="@string/Pronation_Q5"
         android:textAlignment="center"
         android:textColor="#050505"
         android:textSize="20sp"
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="83dp"
             android:onClick="onRadioPronation"
-            android:text="Feet stikefloor with heel first then roll towards the toes. Your arch lightly collapses inward. This is neutral pronation!"
+            android:text="@string/neutral_pronation_answer"
             android:textAlignment="center"
             android:textColor="#03A9F4" />
 
@@ -46,7 +46,7 @@
             android:id="@+id/overPronation"
             android:layout_height="101dp"
             android:onClick="onRadioPronation"
-            android:text="Looks like the whole sole of your foot touches the ground. This means that you are an over pronator and the arch of your foot stretches inward too much."
+            android:text="@string/over_pronation_answer"
             android:textAlignment="center"
             android:textColor="#2196F3" />
 
@@ -55,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="91dp"
             android:onClick="onRadioPronation"
-            android:text="Outside of your foot has the most impact. This means that you are a under pronator. Your feet don't flex enough to provide proper shock absorption."
+            android:text="@string/under_pronation_answer"
             android:textAlignment="center"
             android:textColor="#2196F3" />
     </RadioGroup>

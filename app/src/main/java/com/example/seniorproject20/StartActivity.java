@@ -1,14 +1,12 @@
 package com.example.seniorproject20;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 
-public class StartPage extends AppCompatActivity {
+
+public class StartActivity extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.example.seniorproject20.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,12 +15,11 @@ public class StartPage extends AppCompatActivity {
     }
     //Called when user taps the Send button
     public void startButton(View view) {
-        Intent intent = new Intent(this, WidthFit.class);
+        Intent intent = new Intent(this, WidthActivity.class);
         startActivity(intent);
     }
 
-//    Room.databaseBuilder(appContext. AppDatabase.class, "shoes_database.db")
-//    .createFromFile(new File(""))
+
 
 
 }

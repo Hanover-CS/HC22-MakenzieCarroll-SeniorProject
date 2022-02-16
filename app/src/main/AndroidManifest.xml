@@ -13,23 +13,23 @@
             android:name=".ResultsPage"
             android:exported="false" />
         <activity
-            android:name=".PronationOfFoot"
+            android:name=".PronationActivity"
             android:exported="false" />
         <activity
-            android:name=".StabilityOfShoe"
+            android:name=".StabilityActivity"
             android:exported="false" />
         <activity
-            android:name=".LocationOfRun"
+            android:name=".LocationActivity"
             android:exported="false" />
         <activity
-            android:name=".WidthFit"
-            android:parentActivityName=".StartPage">
+            android:name=".WidthActivity"
+            android:parentActivityName=".StartActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".StartPage" />
+                android:value=".StartActivity" />
         </activity>
         <activity
-            android:name=".StartPage"
+            android:name=".StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

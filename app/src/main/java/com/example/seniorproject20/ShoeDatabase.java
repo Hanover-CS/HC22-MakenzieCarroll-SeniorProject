@@ -2,16 +2,9 @@ package com.example.seniorproject20;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import android.content.Context;
-import android.util.Log;
-import java.io.IOException;
-import java.io.InputStream;
+
 
 public class ShoeDatabase {
 

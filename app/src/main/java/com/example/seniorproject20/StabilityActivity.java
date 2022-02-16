@@ -7,12 +7,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
-//Users specification of the shoes stability fit and its generated number
-public class StabilityOfShoe extends AppCompatActivity {
 
-    ShoeCalculator shoeCalculator;
+//Users specification of the shoes stability fit and its generated number
+public class StabilityActivity extends AppCompatActivity {
+
     private int curTotal;
     private static final String TAG = "StabilityActivity";
+    private static final int STABLE = 100;
+    private static final int NEUTRAL = 200;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +23,6 @@ public class StabilityOfShoe extends AppCompatActivity {
 
         //Grabs the intent and grabs the shoe
         Intent intent = getIntent();
-        //shoeCalculator = intent.getParcelableExtra("radioChosen");
         Bundle extras = intent.getExtras();
         curTotal = extras.getInt("curTotal");
         Log.d(TAG, String.valueOf(curTotal));
@@ -36,20 +37,18 @@ public class StabilityOfShoe extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.stable:
                 if (checked) {
-                    curTotal += 100;
-                    //shoeCalculator.setStable(100);
+                    curTotal += STABLE;
                 }
                 break;
             case R.id.unstable:
                 if (checked) {
-                    curTotal += 200;
-                    //shoeCalculator.setStable(200);
+                    curTotal += NEUTRAL;
                 }
                 break;
         }
 
         Log.d(TAG, String.valueOf(curTotal));
-        Intent intent = new Intent(this, PronationOfFoot.class);
+        Intent intent = new Intent(this, PronationActivity.class);
         intent.putExtra("curTotal", curTotal);
         startActivity(intent);
     }

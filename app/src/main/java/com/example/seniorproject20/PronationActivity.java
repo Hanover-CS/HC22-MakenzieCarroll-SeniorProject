@@ -9,11 +9,14 @@ import android.view.View;
 import android.widget.RadioButton;
 
 //Users specification of the users foot pronation and its generated number
-public class PronationOfFoot extends AppCompatActivity {
+public class PronationActivity extends AppCompatActivity {
 
     ShoeCalculator shoeCalculator;
     private int curTotal;
     private static final String TAG = "PronationActivity";
+    private static final int NORM_PRONATION = 1000;
+    private static final int OVER_PRONATION = 2000;
+    private static final int UNDER_PRONATION = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +25,6 @@ public class PronationOfFoot extends AppCompatActivity {
 
         //Grabs the intent and grabs the shoe
         Intent intent = getIntent();
-        //shoeCalculator = intent.getParcelableExtra("radioChosen");
         Bundle extras = intent.getExtras();
         curTotal = extras.getInt("curTotal");
         Log.d(TAG, String.valueOf(curTotal));
@@ -38,30 +40,23 @@ public class PronationOfFoot extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.neutralPronation:
                 if (checked) {
-                    curTotal += 1000;
-                    //shoeCalculator.setPronation(1000);
+                    curTotal += NORM_PRONATION;
                 }
                 break;
             case R.id.overPronation:
                 if (checked) {
-                    curTotal += 2000;
-                    //shoeCalculator.setPronation(2000);
+                    curTotal += OVER_PRONATION;
                 }
                 break;
             case R.id.underPronation:
                 if (checked) {
-                    curTotal += 3000;
-                    //shoeCalculator.setPronation(3000);
+                    curTotal += UNDER_PRONATION;
                 }
                 break;
         }
 
         Log.d(TAG, String.valueOf(curTotal));
         Intent intent = new Intent(this, ResultsPage.class);
-        //shoeCalculator.createSum();
-//        int total = shoeCalculator.getTotal();
-//        String s = String.valueOf(total);
-//        Log.d(TAG, s);
         intent.putExtra("curTotal", curTotal);
         startActivity(intent);
     }

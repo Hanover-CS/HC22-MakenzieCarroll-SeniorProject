@@ -2,4 +2,8 @@
     <string name="app_name">Senior Project 2.0</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="Pronation_Q5">With your shoes still off take a step, pay attention to how the weight distributes along your foot. How are your feet positioned while walking?</string>
+    <string name="neutral_pronation_answer">Feet stikefloor with heel first then roll towards the toes. Your arch lightly collapses inward. This is neutral pronation!</string>
+    <string name="over_pronation_answer">Looks like the whole sole of your foot touches the ground. This means that you are an over pronator and the arch of your foot stretches inward too much.</string>
+    <string name="under_pronation_answer">Outside of your foot has the most impact. This means that you are a under pronator. Your feet don\'t flex enough to provide proper shock absorption.</string>
 </resources>

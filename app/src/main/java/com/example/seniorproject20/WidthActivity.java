@@ -7,8 +7,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
 //Users specification of the shoes width fit and its generated number
-public class WidthFit extends AppCompatActivity {
+public class WidthActivity extends AppCompatActivity {
 
     //public ShoeCalculator shoeCalculator = new ShoeCalculator();
     private int widthValue;
@@ -26,7 +27,7 @@ public class WidthFit extends AppCompatActivity {
 
         //Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
-        String message = intent.getStringExtra(StartPage.EXTRA_MESSAGE);
+        String message = intent.getStringExtra(StartActivity.EXTRA_MESSAGE);
 
     }
 
@@ -40,25 +41,22 @@ public class WidthFit extends AppCompatActivity {
             case R.id.regularWidth:
                 if (checked) {
                     widthValue = REG_WIDTH;
-                    //shoeCalculator.setWidth(1);
                 }
                 break;
             case R.id.wideWidth:
                 if (checked) {
                     widthValue = WIDE_WIDTH;
-                    //shoeCalculator.setWidth(2);
                 }
                 break;
             case R.id.narrowWidth:
                 if (checked) {
                     widthValue = NARROW_WIDTH;
-                    //shoeCalculator.setWidth(3);
                 }
                 break;
         }
 
         Log.d(TAG, String.valueOf(widthValue));
-        Intent intent = new Intent(this, LocationOfRun.class);
+        Intent intent = new Intent(this, LocationActivity.class);
         intent.putExtra("curTotal", widthValue);
         startActivity(intent);
     }
